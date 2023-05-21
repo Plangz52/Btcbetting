@@ -1,0 +1,21 @@
+import requests
+    def place_bet(username, amount):
+        # Place your bet logic here (e.g., call an API)
+        return True  # Return true if placed successfully, false otherwise
+    
+    username = input("Enter your username: ")
+    balance = float(input("Enter your current balance: "))
+    while True:
+        try:
+            amount = float(input("Enter the amount to bet: "))
+            break
+        except ValueError as e:
+            print("Invalid input!")
+    
+    success = place_bet(username, amount)
+    if not success:
+        print("Bet failed")
+        exit()
+        
+    new_balance = balance - amount
+    print("New Balance:", new_balance)
